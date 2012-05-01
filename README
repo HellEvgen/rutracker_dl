@@ -1,0 +1,24 @@
+Rutracker Downloader v0.6
+
+Скрипт автоматической загрузки обновлённых .torrent файлов с rutracker.org
+
+Требования python 3.x
+
+Настройка:
+Файл config.ini (все значения должны быть без кавычек)
+[DEFAULT]
+tmp_dir = tmp                          # Директория для временных файлов
+true_dir = torr                        # В эту директорию будут складываться обновлённые
+                                       # файлы. Настроить торрент клиент на мониторинг
+                                       # новых файлов
+db_file = db                           # Здесь хранятся id раздач и их размеры
+rls_file = releases.txt                # Файл с ссылками на раздачи
+log_file = torrents_downloader.log     # Файл логов
+
+[rutracker.org]
+LOGIN =                                # Логин
+PASS =                                 # Пароль
+
+Файл rls_file = releases.txt:
+В него построчно поместить ссылки на темы раздач,
+Например http://rutracker.org/forum/viewtopic.php?t=1234567
